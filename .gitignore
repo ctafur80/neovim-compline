@@ -1,0 +1,19 @@
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Temporary Vim/Neovim files (just in case)
+*.swp
+*.swo
+*~
+session.vim
+
+
+# Lua language server dumps (optional)
+.luarc.json
+
+
+
