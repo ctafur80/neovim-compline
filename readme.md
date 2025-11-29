@@ -47,7 +47,7 @@ require("compline").setup({
 
 ```lua
 {
-  "TU_USUARIO_GITHUB/compline",
+  "YOUR_GITHUB_USER/compline",
   lazy = false,
   priority = 1000,
   config = function()
@@ -55,10 +55,6 @@ require("compline").setup({
   end,
 }
 ```
-
-
-
-
 
 
 
