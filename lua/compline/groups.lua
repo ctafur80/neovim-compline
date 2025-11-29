@@ -54,6 +54,7 @@ function M.get_groups(p)
 
         -- Other Languages
         ['@spell.bash'] = { link = 'Comment' },
+        ['@spell.fish'] = { link = '@spell.bash' },
         ['@spell.c'] = { link = 'Comment' },
         ['@spell.typst'] = { fg = p.fg },
         ['@markup.math.typst'] = { fg = p.fg },
