@@ -50,6 +50,7 @@ require("compline").setup({
     vim.cmd([[colorscheme compline]])
   end,
 }
+```
 
 
 
