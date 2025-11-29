@@ -5,6 +5,10 @@
 
 A pretty dark and minimalist colorscheme for Neovim.
 
+This plugin was started as a fork of the [Compline
+palette](https://github.com/jblais493/compline) from Joshua Blais
+(jblais493).
+
 
 
 
