@@ -70,6 +70,30 @@ function M.get_groups(p)
         DiagnosticHint = { fg = p.color8 },
 
 
+
+        -- For gitsigns plugin
+        -- "Add" suele ser Verde (color2 o color6 en tu paleta)
+        GitSignsAdd = { fg = p.color2, bg = "NONE" },
+
+        -- "Change" suele ser Amarillo/Naranja (color3) o Azul (color5)
+        -- En tu paleta, color3 es un tono arena/amarillo suave que irá bien.
+        GitSignsChange = { fg = p.color3, bg = "NONE" },
+
+        -- "Delete" es Rojo (color1)
+        GitSignsDelete = { fg = p.color1, bg = "NONE" },
+
+        -- (Opcional) Si quieres que cambie el texto de la línea, no solo el signo
+        -- GitSignsAddLn = { bg = p.base2 }, 
+
+        -- Grupos estándar de Diff (Vim usa esto para diffs de archivos)
+        -- Es buena práctica definirlos también para que coincidan
+        DiffAdd = { fg = p.color2, bg = "NONE" },
+        DiffChange = { fg = p.color3, bg = "NONE" },
+        DiffDelete = { fg = p.color1, bg = "NONE" },
+        DiffText = { fg = p.color5, bg = "NONE" }, -- Texto cambiado dentro de una línea
+
+
+
     }
 
 end
