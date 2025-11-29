@@ -13,12 +13,12 @@ function M.load()
     end
 
     vim.o.termguicolors = true
-    vim.g.colors_name = "compline"
+    vim.g.colors_name = "lauds"
 
 
     -- Load modules.
-    local palette = require("compline.palette").colors
-    local groups = require("compline.groups").get_groups(palette)
+    local palette = require("lauds.palette").colors
+    local groups = require("lauds.groups").get_groups(palette)
 
 
     -- Apply groups.
