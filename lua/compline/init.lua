@@ -36,8 +36,8 @@ function M.load()
 
     vim.opt.guicursor =
             "n-c-sm:block-Cursor," ..
-            "v:block-CursorVisual," ..
-            "i-ci-ve:ver25-CursorInsert," ..
+            "v-ve:block-CursorVisual," ..
+            "i-ci:ver25-CursorInsert," ..
             "r-cr-o:hor20-CursorReplace"
 
     vim.cmd("redraw")
@@ -56,7 +56,6 @@ function M.setup(user_opts)
     -- Nota: Muchos plugins de temas prefieren solo guardar config aquí y cargar
     -- realmente cuando el usuario hace ":colorscheme compline". 
     -- Pero para simplificar, podemos cargar aquí si quieres.
-    M.load()
 
     -- C. Lógica condicional: ¿Activamos la Statusline?
     if M.config.enable_statusline then
