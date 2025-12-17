@@ -27,17 +27,20 @@ function M.load()
     local palette = require("compline.palette").colors
     local groups = require("compline.groups").get_groups(palette)
 
+
+    -- Makes groups take effect
+    for group, opts in pairs(groups) do
+        vim.api.nvim_set_hl(0, group, opts)
+    end
+
+
     vim.opt.guicursor =
             "n-c-sm:block-Cursor," ..
             "v:block-CursorVisual," ..
             "i-ci-ve:ver25-CursorInsert," ..
             "r-cr-o:hor20-CursorReplace"
 
-
-    -- Makes groups take effect
-    for group, opts in pairs(groups) do
-        vim.api.nvim_set_hl(0, group, opts)
-    end
+    vim.cmd("redraw")
 
 end
 
