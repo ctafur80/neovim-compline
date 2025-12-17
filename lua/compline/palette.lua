@@ -42,7 +42,7 @@ M.colors = {
     bg_alt = '#22262b',
 
     cursor = '#dbcdb3',
-    cursor_text_color = '#1a1d21',
+    cursor_text_color = '#13161a',
 
     selection_foreground = '#e0dcd4',
     selection_background = '#3d424a',
