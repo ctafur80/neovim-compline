@@ -16,6 +16,7 @@ function M.get_groups(p)
         CursorLineNr = { fg = p.color3, bold = true },
 
 
+
         -- Syntax
         Identifier = { fg = p.fg },
         Variable = { link = 'Identifier' },
@@ -32,6 +33,10 @@ function M.get_groups(p)
         Keyword = { fg = p.color1, bold = false },
         Statement = { bold = false },
         Title = { fg = p.fg, bold = true },
+
+        Cursor = { fg = p.cursor_text_color, bg = p.cursor },
+        CursorIM = { fg = p.cursor_text_color, bg = p.cursor },
+
 
         Spell = { fg = p.fg },
         ['@spell'] = { link = 'Spell' },
