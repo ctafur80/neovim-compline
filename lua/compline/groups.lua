@@ -98,6 +98,24 @@ function M.get_groups(p)
         DiffText = { fg = p.color5, bg = "NONE" }, -- Texto cambiado dentro de una línea
 
 
+        -- === STATUSLINE PERSONALIZADA ===
+        -- Modos (Texto del fondo sobre color sólido)
+        StatusLineModeNormal  = { fg = p.bg, bg = p.color5, bold = true }, -- Azul
+        StatusLineModeInsert  = { fg = p.bg, bg = p.color6, bold = true }, -- Verde Teal
+        StatusLineModeVisual  = { fg = p.bg, bg = p.color3, bold = true }, -- Amarillo
+        StatusLineModeReplace = { fg = p.bg, bg = p.color1, bold = true }, -- Rojo
+        StatusLineModeCommand = { fg = p.bg, bg = p.color4, bold = true }, -- Gris
+
+        -- Componentes
+        StatusLineGit   = { fg = p.color3, bg = p.bg_alt }, -- Rama en amarillo sutil
+        StatusLineInfo  = { fg = p.fg,     bg = p.bg_alt }, -- Nombre de archivo
+        StatusLineFill  = { fg = p.fg,     bg = p.bg },     -- El resto de la barra (vacío)
+
+        -- Sobrescribir el StatusLine estándar de Vim para que no moleste
+        StatusLine      = { fg = p.fg, bg = p.bg },
+        StatusLineNC    = { fg = p.color4, bg = p.bg }, -- Ventana no activa (Gris)
+
+
 
     }
 
