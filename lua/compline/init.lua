@@ -31,6 +31,13 @@ function M.load()
     for group, opts in pairs(groups) do
         vim.api.nvim_set_hl(0, group, opts)
     end
+
+    vim.opt.guicursor =
+            "n-c-sm:block-Cursor," ..
+            "v:block-CursorVisual," ..
+            "i-ci-ve:ver25-CursorInsert," ..
+            "r-cr-o:hor20-CursorReplace"
+
 end
 
 
@@ -51,8 +58,6 @@ function M.setup(user_opts)
         -- Aquí llamamos al archivo statusline.lua que creamos antes
         require("compline.statusline").setup()
     end
-
-    -- vim.opt.guicursor = "n-v-c:block-Cursor,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 
 end
 

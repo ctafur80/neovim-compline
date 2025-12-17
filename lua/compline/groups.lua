@@ -36,6 +36,9 @@ function M.get_groups(p)
 
         Cursor = { fg = p.cursor_text_color, bg = p.cursor },
         CursorIM = { fg = p.cursor_text_color, bg = p.cursor },
+        CursorVisual = { fg = p.bg, bg = p.color3 },
+        CursorInsert = { fg = p.bg, bg = p.color6 },
+        CursorReplace = { fg = p.bg, bg = p.color1 },
 
 
         Spell = { fg = p.fg },
