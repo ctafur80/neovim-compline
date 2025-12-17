@@ -56,6 +56,7 @@ function M.setup(user_opts)
     -- Nota: Muchos plugins de temas prefieren solo guardar config aquí y cargar
     -- realmente cuando el usuario hace ":colorscheme compline". 
     -- Pero para simplificar, podemos cargar aquí si quieres.
+    M.load()
 
     -- C. Lógica condicional: ¿Activamos la Statusline?
     if M.config.enable_statusline then
