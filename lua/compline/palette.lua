@@ -34,7 +34,8 @@ M.colors = {
 
     -- Extra colors --
     bg = '#1a1d21',
-    fg = '#b5b9b5',
+    fg = '#b6b8b6',
+    -- fg = '#b5b9b5',
     -- fg = '#b9b7b5',
 
     fg_alt = '#ccc4b4',
