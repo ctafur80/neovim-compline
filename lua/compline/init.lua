@@ -3,8 +3,8 @@
 
 local M = {}
 
--- 1. Configuración por defecto
--- Si el usuario no pone nada, estas son las opciones que se usan.
+
+-- Default settings
 local default_config = {
     transparent = false,      -- Fondo transparente (futuro)
     enable_statusline = false, -- Por defecto apagada, el usuario debe pedirla
@@ -12,21 +12,22 @@ local default_config = {
 }
 
 
-
--- Variable para guardar la configuración final
+-- Stores the final settings
 M.config = {}
 
+
+
 function M.load()
-    -- Resetear colores y cargar paleta/grupos
+    -- Resets colors and loads pallette and hl goups
     if vim.g.colors_name then vim.cmd("hi clear") end
     vim.o.termguicolors = true
     vim.g.colors_name = "compline"
 
-    -- Cargar módulos internos
+    -- Loads plug-in internal modules
     local palette = require("compline.palette").colors
     local groups = require("compline.groups").get_groups(palette)
 
-    -- Aplicar grupos
+    -- Makes groups take effect
     for group, opts in pairs(groups) do
         vim.api.nvim_set_hl(0, group, opts)
     end
