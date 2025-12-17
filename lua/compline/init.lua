@@ -58,7 +58,7 @@ function M.setup(user_opts)
     -- realmente cuando el usuario hace ":colorscheme compline". 
     -- Pero para simplificar, podemos cargar aquí si quieres.
 
-    -- Requires a terminal that accepts OSC 12 escape codes, like Ghostty
+    -- Requires a terminal with OSC 12 escape codes support, like Ghostty
     if M.config.enable_statusline then
         require("compline.statusline").setup()
     end
