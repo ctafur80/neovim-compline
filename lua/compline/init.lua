@@ -51,6 +51,9 @@ function M.setup(user_opts)
         -- Aquí llamamos al archivo statusline.lua que creamos antes
         require("compline.statusline").setup()
     end
+
+    vim.opt.guicursor = "n-v-c:block-Cursor,i-ci-ve:ver25,r-cr:hor20,o:hor50"
+
 end
 
 
