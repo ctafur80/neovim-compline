@@ -34,11 +34,11 @@ function M.get_groups(p)
         Statement = { bold = false },
         Title = { fg = p.fg, bold = true },
 
-        Cursor = { fg = p.cursor_text_color, bg = p.cursor, cterm = "NONE" },
+        Cursor = { fg = p.cursor_text_color, bg = p.cursor },
         CursorIM = { link = 'Cursor' },
-        CursorVisual = { fg = p.bg, bg = p.color5, cterm = "NONE" }, -- Blue for distinct visual mode
-        CursorInsert = { fg = p.bg, bg = p.color6, cterm = "NONE" },
-        CursorReplace = { fg = p.bg, bg = p.color1, cterm = "NONE" },
+        CursorVisual = { fg = p.bg, bg = p.color3 },
+        CursorInsert = { fg = p.bg, bg = p.color6 },
+        CursorReplace = { fg = p.bg, bg = p.color1 },
         TermCursor = { link = 'Cursor' },
 
 
