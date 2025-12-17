@@ -52,7 +52,7 @@ function M.setup(user_opts)
         require("compline.statusline").setup()
     end
 
-    vim.opt.guicursor = "n-v-c:block-Cursor,i-ci-ve:ver25,r-cr:hor20,o:hor50"
+    -- vim.opt.guicursor = "n-v-c:block-Cursor,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 
 end
 
