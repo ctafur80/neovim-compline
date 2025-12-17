@@ -3,10 +3,11 @@
 
 local M = {}
 
--- 1. Variables internas
 local git_branch = ""
 
--- 2. Función para actualizar Git (sin bloquear)
+
+
+-- Updates Git without blocking it
 local function update_git_branch()
     local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
     if string.len(branch) > 0 then
@@ -16,7 +17,9 @@ local function update_git_branch()
     end
 end
 
--- 3. Función para obtener el modo y su color
+
+
+-- Gets the Vi mode and its color
 local function get_mode()
     local current_mode = vim.api.nvim_get_mode().mode
 
@@ -40,7 +43,9 @@ local function get_mode()
     return mode_data.hl .. mode_data.text .. "%#StatusLineFill#"
 end
 
--- 4. La función que Neovim llama cada vez que dibuja la pantalla
+
+
+-- The function that Neovim calls every time it draws the screen
 function M.render()
     return table.concat({
         get_mode(),                     -- Bloque de Modo (NOR, INS...)
@@ -55,17 +60,20 @@ function M.render()
     })
 end
 
--- 5. FUNCIÓN DE ACTIVACIÓN (Importante)
+
+
+
+-- Activation function (important)
 function M.setup()
-    -- Configurar Git listeners
+    -- Config Git listeners
     vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "BufWritePost" }, {
         callback = update_git_branch,
     })
 
-    -- Asegurar que la barra siempre se muestra (2) o global (3)
+    -- Makes sure that the barr is always showing (2) or global (3)
     vim.opt.laststatus = 2
 
-    -- Asignar la statusline a esta función
+    -- Assigns the statusline to this function
     vim.opt.statusline = "%!v:lua.require('compline.statusline').render()"
 end
 
