@@ -36,6 +36,7 @@ function M.get_groups(p)
         Spell = { fg = p.fg },
         ['@spell'] = { link = 'Spell' },
 
+        -- ['Comment'] = { link = 'Comment' },
 
         -- Markdown
         ['@spell.markdown'] = { link = 'Normal' },
@@ -63,6 +64,9 @@ function M.get_groups(p)
         ['shStatement'] = { link = 'Function' },
         ['@function.builtin.bash'] = { link = 'Function' },
 
+
+
+        ['@spell.yaml'] = { link = 'Comment' },
 
         -- Diagnostics
         DiagnosticError = { fg = p.color1 },
