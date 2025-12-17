@@ -35,10 +35,11 @@ function M.get_groups(p)
         Title = { fg = p.fg, bold = true },
 
         Cursor = { fg = p.cursor_text_color, bg = p.cursor },
-        CursorIM = { fg = p.cursor_text_color, bg = p.cursor },
+        CursorIM = { link = 'Cursor' },
         CursorVisual = { fg = p.bg, bg = p.color3 },
         CursorInsert = { fg = p.bg, bg = p.color6 },
         CursorReplace = { fg = p.bg, bg = p.color1 },
+        TermCursor = { link = 'Cursor' },
 
 
         Spell = { fg = p.fg },

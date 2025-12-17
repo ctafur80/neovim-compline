@@ -34,6 +34,7 @@ function M.load()
     end
 
 
+    vim.opt.guicursor = ""
     vim.opt.guicursor =
             "n-c-sm:block-Cursor," ..
             "v-ve:block-CursorVisual," ..
@@ -57,9 +58,8 @@ function M.setup(user_opts)
     -- realmente cuando el usuario hace ":colorscheme compline". 
     -- Pero para simplificar, podemos cargar aquí si quieres.
 
-    -- C. Lógica condicional: ¿Activamos la Statusline?
+    -- Requires a terminal that accepts OSC 12 escape codes, like Ghostty
     if M.config.enable_statusline then
-        -- Aquí llamamos al archivo statusline.lua que creamos antes
         require("compline.statusline").setup()
     end
 
