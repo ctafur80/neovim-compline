@@ -78,4 +78,8 @@ end
 -- Usamos set statusline global
 vim.opt.statusline = "%!v:lua.require('compline.statusline').render()"
 
+
 return M
+
+
+
