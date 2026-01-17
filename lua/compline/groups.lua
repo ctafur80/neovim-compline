@@ -68,6 +68,7 @@ function M.get_groups(p)
         -- ['@spell.fish'] = { link = '@spell.bash' },
         -- ['@spell.c'] = { link = 'Comment' },
         -- ['@spell.typst'] = { fg = p.fg },
+        ['@spell.gitcommit'] = { fg = p.fg },
         ['@markup.math.typst'] = { fg = p.fg },
         ['@type.text.typst'] = { fg = p.color6 },
         ['@lsp.mod.math.typst'] = { fg = p.color6 },
