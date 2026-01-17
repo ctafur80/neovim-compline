@@ -28,7 +28,7 @@ function M.load()
     local groups = require("compline.groups").get_groups(palette)
 
 
-    -- Makes groups take effect
+    -- Forces the groups to take effect
     for group, opts in pairs(groups) do
         vim.api.nvim_set_hl(0, group, opts)
     end
