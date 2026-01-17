@@ -42,14 +42,15 @@ function M.get_groups(p)
         TermCursor = { link = 'Cursor' },
 
 
-        Spell = { fg = p.fg },
+        -- Spell = { fg = p.fg },
+        Spell = { link = 'Comment' },
         ['@spell'] = { link = 'Spell' },
 
         -- ['Comment'] = { link = 'Comment' },
 
         -- Markdown
         ['@spell.markdown'] = { link = 'Normal' },
-        ['@spell.html'] = { link = 'Comment' },
+        -- ['@spell.html'] = { link = 'Comment' },
         ['@markup.link.url.markdown_inline'] = { italic = true },
         ['@markup.link.url.markdown'] = { underline = false },
         ['markdownUrl'] = { link = '@spell.markdown' },
@@ -63,10 +64,10 @@ function M.get_groups(p)
 
 
         -- Other Languages
-        ['@spell.bash'] = { link = 'Comment' },
-        ['@spell.fish'] = { link = '@spell.bash' },
-        ['@spell.c'] = { link = 'Comment' },
-        ['@spell.typst'] = { fg = p.fg },
+        -- ['@spell.bash'] = { link = 'Comment' },
+        -- ['@spell.fish'] = { link = '@spell.bash' },
+        -- ['@spell.c'] = { link = 'Comment' },
+        -- ['@spell.typst'] = { fg = p.fg },
         ['@markup.math.typst'] = { fg = p.fg },
         ['@type.text.typst'] = { fg = p.color6 },
         ['@lsp.mod.math.typst'] = { fg = p.color6 },
