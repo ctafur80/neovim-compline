@@ -1,0 +1,8 @@
+#!/bin/sh
+# Lanza nvim usando la configuración mínima de la carpeta tests
+# y abre el archivo de ejemplo.
+
+
+nvim -u tests/minimal_init.lua tests/sample.py
+
+
