@@ -69,6 +69,8 @@ function M.get_groups(p)
         -- ['@spell.c'] = { link = 'Comment' },
         -- ['@spell.typst'] = { fg = p.fg },
         ['@string.documentation'] = { link = 'Comment' },
+        ['@lsp.typemod.string.documentation'] = { link = 'Comment' },
+        ['@lsp.typemod.string.documentation.python'] = { link = 'Comment' },
         ['@spell.gitcommit'] = { fg = p.fg },
         ['@markup.math.typst'] = { fg = p.fg },
         ['@type.text.typst'] = { fg = p.color6 },
