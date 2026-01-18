@@ -68,6 +68,7 @@ function M.get_groups(p)
         -- ['@spell.fish'] = { link = '@spell.bash' },
         -- ['@spell.c'] = { link = 'Comment' },
         -- ['@spell.typst'] = { fg = p.fg },
+        ['@spell.typst'] = { link = 'Normal' },
         ['@string.documentation'] = { link = 'Comment' },
         ['@lsp.typemod.string.documentation'] = { link = 'Comment' },
         -- ['@lsp.typemod.string.documentation.python'] = { link = 'Comment' },
@@ -77,6 +78,8 @@ function M.get_groups(p)
         ['@lsp.mod.math.typst'] = { fg = p.color6 },
         ['shStatement'] = { link = 'Function' },
         ['@function.builtin.bash'] = { link = 'Function' },
+
+        ['@markup.link.typst'] = { link = 'Normal' },
 
 
 
